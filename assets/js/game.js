@@ -17,13 +17,13 @@ var enemyHealth = 50;
 var enemyAttack = 12;
 
 var fight = function(enemyName) {
-    //repeat and execute as lon as the enemy-robot is alive
+    //repeat and execute as long as the enemy-robot is alive
     while(enemyHealth > 0 && playerHealth > 0) { 
     
     //ask players if they'd like to fight or run
     var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
 
-    //if player choses to skip
+    //if player choses to skip confirm then stoop the loop
     if (promptFight === "skip" || promptFight ==="SKIP") {
         //confirm player wants to skip
        var confirmSkip = window.confirm("Are you sure you'd like to quit?");
@@ -37,10 +37,6 @@ var fight = function(enemyName) {
                break;
            }
        }
-
-
-    //if player choses to fight, then fight
-   // if (promptFight ==="fight" || promptFight ==="FIGHT") {
      
    //remove enemy's health by subtracting the amount set in the playerAttack variable 
     enemyHealth = enemyHealth - playerAttack;
@@ -57,7 +53,7 @@ var fight = function(enemyName) {
             window.alert(enemyName + " still has " + enemyHealth + " health left. ");    
         }
 
-        //remove player's health by subtractin the amount set in the enemyAttack variable
+        //remove player's health by subtracting the amount set in the enemyAttack variable
         playerHealth = playerHealth - enemyAttack;
         console.log(
         enemyName + " attacked " + playerName + " ." + playerName + " now has " + playerHealth + " health remaining. "
