@@ -148,8 +148,8 @@ var fight = function(enemy) {
 //go to shop between battle functions
 var shop = function() {
     //ask player what they'd like to do
-    var shopOptionPrompt= window.prompt ("Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter 1 for 'REFILL', 2 for'UPGRADE',  or 3 for 'LEAVE'.");
-    
+    var shopOptionPrompt = window.prompt ("Would you like to REFILL your health, UPGRADE your attack, or LEAVE the store? Please enter 1 for 'REFILL', 2 for'UPGRADE',  or 3 for 'LEAVE'.");
+    console.log(shopOptionPrompt);
     
     //check if prompt was left blank, player hit "cancel" or provided a number instead
     if (shopOptionPrompt === null || shopOptionPrompt === ""  || isNaN(shopOptionPrompt)) {
